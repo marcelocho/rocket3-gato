@@ -1,0 +1,183 @@
+:root {
+  --color-azul: #065e7c;
+  --color-white: hsl(196, 100%, 98%);
+  font-family: "Mulish", sans-serif;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  background: var(--color-azul);
+  width: 100%;
+  height: 7.2rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+header img {
+  border-radius: 50%;
+  height: 42px;
+  width: 42px;
+}
+
+header #logo {
+  background: var(--color-white);
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem 0.8rem;
+}
+
+.input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+input {
+  background-color: hsla(0, 0%, 100%, 0.2);
+  border: none;
+  color: #ffffff;
+  font-family: "Mulish", sans-serif;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1.6rem;
+  padding: 1.2rem 1.4rem;
+}
+
+input::placeholder {
+  opacity: 1;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-image {
+  object-fit: cover;
+  overflow: hidden;
+  width: 100vw;
+}
+.main-image img {
+  width: 100%;
+}
+.main-post {
+  margin: 3.1rem 2.4rem 0;
+}
+
+.main-post .curtir {
+  display: flex;
+  height: 40px;
+  gap: 12px;
+  margin-top: 0.8rem;
+  margin-bottom: 3.1rem;
+}
+
+.curtir img {
+  padding: 12px;
+  display: inline-block;
+  background: var(--color-azul);
+  border-radius: 50%;
+}
+
+.main-text p {
+  font-size: 1.6rem;
+  line-height: 160%;
+}
+
+.related-post {
+  margin: 3.4rem 2.4rem 0;
+}
+
+.side-post {
+  margin-top: 3.2rem;
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.side-post h2 {
+  font-size: 1.8rem;
+  font-weight: bolder;
+  line-height: 13px;
+  padding-bottom: 13px;
+}
+
+.side-post p {
+  font-size: 1.4rem;
+}
+
+footer {
+  background: #387e96;
+  padding: 2.6rem;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 3.9rem;
+  display: flex;
+}
+
+footer p {
+  margin: auto;
+}
+
+@media (min-width: 1150px) {
+  .input-wrapper {
+    flex: 0.85;
+  }
+  .input-wrapper input {
+    width: 100%;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 4rem 11rem 0;
+  }
+
+  .main-image {
+    grid-column: 1/3;
+    max-width: 100%;
+  }
+
+  .main-image img {
+    object-fit: cover;
+  }
+
+  .main-post {
+    grid-column: 1/3;
+    margin: 0;
+  }
+
+  .titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3.1rem 0;
+  }
+
+  .titulo .curtir {
+    margin: 0;
+  }
+
+  .related-post {
+    grid-column: 3/4;
+    grid-row: 1/3;
+    margin-top: 0;
+    margin-right: 0;
+  }
+}
